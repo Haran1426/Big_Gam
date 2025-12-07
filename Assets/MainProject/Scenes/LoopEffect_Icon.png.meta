@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      LoopEffect_Icon_0: -7582764759244111814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
