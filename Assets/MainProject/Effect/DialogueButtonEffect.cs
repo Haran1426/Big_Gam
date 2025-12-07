@@ -107,11 +107,11 @@ public class DialogueButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointe
         Sequence seq = DOTween.Sequence();
 
         // 1. 살짝 커짐
-        seq.Append(rectTransform.DOScale(1.1f, 0.1f));
+        seq.Append(rectTransform.DOScale(1.3f, 0.1f));
         // 2. 가로로 납작해지며 사라짐 (TV 꺼지듯)
-        seq.Append(rectTransform.DOScale(new Vector3(1.5f, 0.01f, 1f), 0.2f).SetEase(Ease.InBack));
+        seq.Append(rectTransform.DOScale(new Vector3(1.5f, 0.01f, 1f), 0.1f).SetEase(Ease.InBack));
         seq.Join(buttonImage.DOFade(0, 0.1f).SetDelay(0.15f));
-
+        seq.SetDelay(0.3f);
         seq.OnComplete(() => gameObject.SetActive(false));
     }
 

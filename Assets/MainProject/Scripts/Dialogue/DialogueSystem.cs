@@ -261,7 +261,7 @@ public class DialogueSystem : MonoBehaviour
                 // 선택된 버튼: 클릭 효과 -> TV 꺼짐 효과
                 effect.PlayClickAnimation();
                 // 클릭 진동을 잠시 느낄 시간
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.2f);
                 effect.PlaySelectedCloseAnimation();
             }
             else
