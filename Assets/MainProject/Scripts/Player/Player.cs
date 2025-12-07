@@ -18,6 +18,7 @@ public class PlayerMove2D : MonoBehaviour
     void Update()
     {
         input = Input.GetAxisRaw("Horizontal");
+        if(DialogueSystem.Instance.isDialogueActive) input = 0;
         Move();
     }
 
@@ -27,7 +28,7 @@ public class PlayerMove2D : MonoBehaviour
 
         rb.linearVelocity = new Vector2(input * moveSpeed, rb.linearVelocity.y);
 
-        if (Input.GetButtonDown("Jump") && isGround)
+        if (Input.GetButtonDown("Jump") && isGround && !DialogueSystem.Instance.isDialogueActive)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
     }
 }

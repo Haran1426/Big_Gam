@@ -16,7 +16,7 @@ public class DialogueSystem : MonoBehaviour
     public int currentDialogueIndex = 0;
 
     private bool isWritingText = false;
-    private bool isDialogueActive = false;
+    public bool isDialogueActive = false;
     private Coroutine typingCoroutine;
 
     private void Awake()

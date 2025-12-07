@@ -22,7 +22,7 @@ public class PropBase : MonoBehaviour
         foreach (var collider in colliders) {
             if (collider.CompareTag("Player"))
             {
-                if(Input.GetKeyDown(KeyCode.F)) DialogueSystem.Instance.StartDialogue(propData);
+                if(Input.GetKeyDown(KeyCode.F) && !DialogueSystem.Instance.isDialogueActive) DialogueSystem.Instance.StartDialogue(propData);
                 Debug.Log($"Prop is Colliding with Player: {propData.propID}"); 
             }
         }
