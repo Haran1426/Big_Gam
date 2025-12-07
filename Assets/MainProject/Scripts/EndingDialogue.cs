@@ -51,7 +51,7 @@ public class EndingDialogue : MonoBehaviour
                 isWritingText = false;
                 dialogueText.text = currentDialogue.dialogueText;
 
-                SceneManager.LoadScene("Title");
+                
             }
             else
             {
@@ -73,6 +73,7 @@ public class EndingDialogue : MonoBehaviour
         {
             isDialogueActive = false;
             dialogueUI.SetActive(false);
+            SceneManager.LoadScene("Title");
         }
     }
 

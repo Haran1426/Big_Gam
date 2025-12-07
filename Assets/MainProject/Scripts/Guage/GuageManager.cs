@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public enum GuageType
 {
@@ -56,6 +57,19 @@ public class GuageManager : MonoBehaviour
         DOTween.To(() => securitySlider.value, x => securitySlider.value = x, securityValue / 100f, 0.5f);
 
         Debug.Log("Gauge UI Updated");
+    }
+
+    void FixedUpdate()
+    {
+        if(SceneManager.GetActiveScene().name == "Title")
+        {
+            canvasGuageUI.SetActive(false);
+        }
+        else
+        {
+            canvasGuageUI.SetActive(true);
+            UpdateGuageUI();
+        }
     }
 
     public void AddGuageValue(GuageType type, float value)
