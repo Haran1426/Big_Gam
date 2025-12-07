@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Mirae_Nomal
+  m_EditorClassIdentifier: 
+  propID: Mirae-Nomal
+  interactiveAreaSize: {x: 3, y: 3}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    characterName: Mirae
+    dialogueText: (Wheezing) Mister... Mom said she'd be back soon... it's been 3
+      days...
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    characterName: Mirae
+    dialogueText: Teddy is sick... He lost his fur because of the black rain....
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    characterName: Mirae
+    dialogueText: Why is the sky red? Did a monster appear?
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    characterName: Mirae
+    dialogueText: My tummy hurts... I drank water but it tasted like sand...
+    branches: []
