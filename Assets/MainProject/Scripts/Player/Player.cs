@@ -65,11 +65,11 @@ public class PlayerMove2D : MonoBehaviour
 
         if(sceneIndex == 4 || isGoal)
         {
-            SceneManager.LoadScene("Ending");
+            FadeManager.Instance.LoadSceneWithFade("Ending");
         }
         if(isGoal)
         {
-            SceneManager.LoadScene($"Day{sceneIndex}");
+            FadeManager.Instance.LoadSceneWithFade($"Day{sceneIndex}");
         }
     }
 }

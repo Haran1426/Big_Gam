@@ -77,6 +77,6 @@ public class TimeMachine : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene("Day1");
+        FadeManager.Instance.LoadSceneWithFade("Day1");
     }
 }
