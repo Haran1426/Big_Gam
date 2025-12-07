@@ -15,4 +15,66 @@ MonoBehaviour:
   propID: Car
   interactiveAreaSize: {x: 6, y: 2}
   interactiveAreaOffset: {x: 0, y: 0}
-  dialogues: []
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Exceeded emission limits.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: The owner is a powerful politician's son
+    branches:
+    - optionText: Pass
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 20
+        happinessGuageChange: -10
+        securityGaugeChange: -10
+        characterName: Player
+        dialogueText: Oh, young master. Please go ahead
+        branches: []
+    - optionText: Warning
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: 0
+        securityGaugeChange: -5
+        characterName: Player
+        dialogueText: Please be careful next time
+        branches: []
+    - optionText: Fine
+      nextDialogue:
+        dialogueType: 1
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 5
+        characterName: 
+        dialogueText: Follow the law. Impose a fine.
+        branches: []
+    - optionText: Impound
+      nextDialogue:
+        dialogueType: 1
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -15
+        happinessGuageChange: 10
+        securityGaugeChange: 15
+        characterName: Player
+        dialogueText: Get out! Impound it immediately.
+        branches: []

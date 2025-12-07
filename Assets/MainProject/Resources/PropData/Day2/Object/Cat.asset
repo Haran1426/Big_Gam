@@ -15,4 +15,55 @@ MonoBehaviour:
   propID: Cat
   interactiveAreaSize: {x: 2, y: 2}
   interactiveAreaOffset: {x: 0, y: 0}
-  dialogues: []
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Drank polluted water and collapsed.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Gasping for air.
+    branches:
+    - optionText: Rescue
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -15
+        happinessGuageChange: 15
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Take to the vet. I'll pay the bill.
+        branches: []
+    - optionText: Report
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -5
+        happinessGuageChange: 5
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Send it to the city shelter.
+        branches: []
+    - optionText: Ignore
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 5
+        happinessGuageChange: -20
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: People are dying, no time for animals.
+        branches: []

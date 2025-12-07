@@ -15,4 +15,66 @@ MonoBehaviour:
   propID: Pannel
   interactiveAreaSize: {x: 3, y: 4}
   interactiveAreaOffset: {x: 0, y: -3}
-  dialogues: []
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Flashy ads promoting consumption.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Consuming huge electricity.
+    branches:
+    - optionText: Keep Ads
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -10
+        economyGuageChange: 15
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: ' '
+        branches: []
+    - optionText: Night Off
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 5
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: It's a waste of electricity. Turn it off at night.
+        branches: []
+    - optionText: 'Hack: Truth'
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 15
+        economyGuageChange: 0
+        happinessGuageChange: -10
+        securityGaugeChange: -5
+        characterName: 
+        dialogueText: Broadcast a video about the severity of pollution!
+        branches: []
+    - optionText: 'Hack: Propaganda'
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -5
+        happinessGuageChange: 10
+        securityGaugeChange: 10
+        characterName: 
+        dialogueText: Broadcast propaganda that the government is doing well!
+        branches: []

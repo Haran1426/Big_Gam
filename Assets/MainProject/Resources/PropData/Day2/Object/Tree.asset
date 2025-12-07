@@ -15,4 +15,66 @@ MonoBehaviour:
   propID: Tree
   interactiveAreaSize: {x: 4, y: 7}
   interactiveAreaOffset: {x: 0, y: 0}
-  dialogues: []
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Leaves fell due to acid rain, Only bare branches remain.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: looking like a scar on the city.
+    branches:
+    - optionText: Install Ad
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -15
+        economyGuageChange: 15
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Install an ad board on the trunk to make profit.
+        branches: []
+    - optionText: Replant
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 15
+        economyGuageChange: -15
+        happinessGuageChange: 0
+        securityGaugeChange: 5
+        characterName: 
+        dialogueText: Replant it, even if it costs money.
+        branches: []
+    - optionText: Fake Leaves
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -10
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 10
+        characterName: 
+        dialogueText: Decorate with plastic leaves to make it look alive.
+        branches: []
+    - optionText: Cut Down
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: 0
+        happinessGuageChange: 0
+        securityGaugeChange: 5
+        characterName: ???
+        dialogueText: It's ugly. Just cut it down.
+        branches: []
