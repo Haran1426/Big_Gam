@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Police
+  m_EditorClassIdentifier: 
+  propID: Police
+  interactiveAreaSize: {x: 1, y: 2}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: Mayor, did you bring a bulletproof vest? It's a mess out there.
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: (Extinguishing a cigarette) Caught three looters last night. All
+      they stole were 'water' and 'canned food'. Excuses...
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: Those protesters... wearing masks makes them unidentifiable. I
+      want to rip them all off.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: I'm running on pure rage right now. I won't watch order collapse.
+    branches:
+    - optionText: Report, Chief.
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: Police Chief
+        dialogueText: (Hits the map) It's out of control. Smog blinds CCTV, and looters
+          are smashing shop windows.
+        branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Player
+    dialogueText: Shouldn't we deploy more troops?
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: It's not troops we lack. It's 'Authority'! Mayor, we must lock
+      down the city tonight. Not a single rat gets out.
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: It's not troops we lack. It's 'Authority'! Mayor, we must lock
+      down the city tonight. Not a single rat gets out.
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police Chief
+    dialogueText: The backlash will be severe...
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Police
+    dialogueText: Freedom? What use is it if you're dead? Give me a clear order.
+      Lockdown, Patrol, or Leave it?
+    branches:
+    - optionText: Total Lockdown
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -10
+        happinessGuageChange: -30
+        securityGaugeChange: 30
+        characterName: Player
+        dialogueText: Don't touch the shops. Let them do business.
+        branches: []
+    - optionText: Increase Patrols
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -10
+        happinessGuageChange: 5
+        securityGaugeChange: 10
+        characterName: Player
+        dialogueText: We can't cage the citizens. Just increase the patrol units.
+        branches: []
+    - optionText: Economy First
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 20
+        happinessGuageChange: -5
+        securityGaugeChange: -20
+        characterName: Player
+        dialogueText: Don't touch the shops. Let them do business.
+        branches: []

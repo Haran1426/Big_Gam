@@ -58,7 +58,7 @@ MonoBehaviour:
         branches: []
     - optionText: Fine
       nextDialogue:
-        dialogueType: 1
+        dialogueType: 0
         actionGaugeReductionRate: 0
         evironmentGuageChange: 0
         economyGuageChange: -5
@@ -69,7 +69,7 @@ MonoBehaviour:
         branches: []
     - optionText: Impound
       nextDialogue:
-        dialogueType: 1
+        dialogueType: 0
         actionGaugeReductionRate: 0
         evironmentGuageChange: 0
         economyGuageChange: -15
