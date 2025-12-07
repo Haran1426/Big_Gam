@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Doomsday_Cult
+  m_EditorClassIdentifier: 
+  propID: Doomsday-Cult
+  interactiveAreaSize: {x: 3, y: 3}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Doomsday Cult
+    dialogueText: Cultists blocking the road, lighting fires for a rain ritual.
+    branches:
+    - optionText: Disperse
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: -10
+        securityGaugeChange: 15
+        characterName: 
+        dialogueText: Fire water cannons! Clear them out.
+        branches: []
+    - optionText: Ignore
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -15
+        economyGuageChange: 0
+        happinessGuageChange: 5
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Let them pray. Freedom of religion.
+        branches: []
+    - optionText: Join
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -10
+        happinessGuageChange: 20
+        securityGaugeChange: -10
+        characterName: 
+        dialogueText: Oh God... save us.
+        branches: []
