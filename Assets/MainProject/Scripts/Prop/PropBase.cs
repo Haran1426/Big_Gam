@@ -3,6 +3,10 @@ using UnityEngine;
 public class PropBase : MonoBehaviour
 {
     public PropData propData;
+    public PropData subPropData;
+    public GameObject outline;
+
+    public bool isAlreadyInteracted = false;
     
     private void OnDrawGizmos() {
         Gizmos.color = Color.cyan;
@@ -19,12 +23,25 @@ public class PropBase : MonoBehaviour
             0f
         );
 
+        bool isPlayerNearby = false;
+
         foreach (var collider in colliders) {
             if (collider.CompareTag("Player"))
             {
-                if(Input.GetKeyDown(KeyCode.F) && !DialogueSystem.Instance.isDialogueActive) DialogueSystem.Instance.StartDialogue(propData);
+                if(Input.GetKeyDown(KeyCode.F) && !DialogueSystem.Instance.isDialogueActive && !isAlreadyInteracted) 
+                {
+                    DialogueSystem.Instance.StartDialogue(propData);
+                    isAlreadyInteracted = true;
+                }
+                else if(Input.GetKeyDown(KeyCode.F) && !DialogueSystem.Instance.isDialogueActive && isAlreadyInteracted && subPropData != null) 
+                {
+                    DialogueSystem.Instance.StartDialogue(subPropData);
+                }
                 Debug.Log($"Prop is Colliding with Player: {propData.propID}"); 
+                isPlayerNearby = true;
             }
         }
+
+        outline.SetActive(isPlayerNearby);
     }
 }

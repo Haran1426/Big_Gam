@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: MaskShop
+  m_EditorClassIdentifier: 
+  propID: MaskShop
+  interactiveAreaSize: {x: 6, y: 5}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    policeGuageChange: 0
+    characterName: 
+    dialogueText: Prices jumped 10x due to severe pollution.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    policeGuageChange: 0
+    characterName: 
+    dialogueText: The owner is counting piles of cash.
+    branches:
+    - optionText: Speculate
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 5
+        economyGuageChange: 25
+        happinessGuageChange: -15
+        policeGuageChange: 0
+        characterName: 
+        dialogueText: Give me all the stock. I'll sell it for double.
+        branches: []
+    - optionText: Donate
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: -25
+        happinessGuageChange: 25
+        policeGuageChange: 0
+        characterName: 
+        dialogueText: Buy it all and distribute it for free to citizens.
+        branches: []
+    - optionText: Price Control
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -5
+        happinessGuageChange: 10
+        policeGuageChange: 0
+        characterName: 
+        dialogueText: Administrative Order. Sell at the fixed price.
+        branches: []
+    - optionText: Confiscate
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -10
+        happinessGuageChange: 5
+        policeGuageChange: 10
+        characterName: 
+        dialogueText: Profiteering during a disaster? Confiscate everything!
+        branches: []
+    - optionText: Buy
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 10
+        economyGuageChange: -5
+        happinessGuageChange: -5
+        policeGuageChange: 0
+        characterName: 
+        dialogueText: Buy only the premium gas mask for myself.
+        branches: []
