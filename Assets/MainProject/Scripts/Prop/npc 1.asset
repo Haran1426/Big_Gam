@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: npc 1
+  m_EditorClassIdentifier: 
+  propID: 
+  interactiveAreaSize: {x: 3, y: 3}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 41
+    characterName: Mr.Gold
+    dialogueText: Mayor, business is all about timing. We need to row when the tide
+      is high. I want to run the factory at full capacity, 24 hours a day.
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    characterName: Player
+    dialogueText: That will exceed emission limits.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    characterName: Mr.Gold
+    dialogueText: Hey, let's be flexible. Instead, I'll make a huge donation to your
+      'Smart City' project. The factory runs, the city earns, and workers get paid.
+      Isn't this a Win-Win? Just sign here.
+    branches:
+    - optionText: Approval
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        characterName: Player
+        dialogueText: Fine. Economy comes first. Run it freely.
+        branches: []
+    - optionText: Strengthen
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        characterName: Player
+        dialogueText: Follow the law. Exceed limits and I shut you down.
+        branches: []
+    - optionText: Allow
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        characterName: Player
+        dialogueText: Run it secretly at night. Avoid public complaints.
+        branches: []
+    - optionText: Accept Bribe
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        characterName: Player
+        dialogueText: Not a donation... send it to my personal account.
+        branches: []
