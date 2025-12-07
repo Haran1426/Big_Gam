@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d22cba053531d0c4ebc7f67ce93640b3
+guid: 7d36f3bfd813bd243bc099244b4e7541
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -124,7 +124,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -162,7 +162,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -859,7 +859,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      part-removebg-preview_0: 4663302065302027032
+      part-removebg-preview_1: 587001701485134500
+      part-removebg-preview_10: 7845176448320797766
+      part-removebg-preview_11: 6213662273021751630
+      part-removebg-preview_12: 4152476547177521866
+      part-removebg-preview_13: -3193049491105219064
+      part-removebg-preview_14: 7105991208884139719
+      part-removebg-preview_15: -6157018790565483278
+      part-removebg-preview_16: 5664612155443778825
+      part-removebg-preview_17: -2890135761687164587
+      part-removebg-preview_18: -5133026982685401811
+      part-removebg-preview_19: -1611252554161951128
+      part-removebg-preview_2: 2455662183882642578
+      part-removebg-preview_20: 6914452863746186360
+      part-removebg-preview_21: 6113852915226536667
+      part-removebg-preview_22: -7615263826191410122
+      part-removebg-preview_23: -7209220370582847752
+      part-removebg-preview_24: -6853649528998237083
+      part-removebg-preview_25: 8171515172234437675
+      part-removebg-preview_26: 1852936570714821142
+      part-removebg-preview_27: -2134140494251832586
+      part-removebg-preview_28: 1445234872422395714
+      part-removebg-preview_29: -8678475782603514062
+      part-removebg-preview_3: 2806491678500667908
+      part-removebg-preview_4: 8650278227440216115
+      part-removebg-preview_5: 1372914695953465800
+      part-removebg-preview_6: -5675657070889293996
+      part-removebg-preview_7: 6360313228824267357
+      part-removebg-preview_8: -8522957359924317038
+      part-removebg-preview_9: -4660756796243376060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
