@@ -23,6 +23,11 @@ public class PlayerMove2D : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    void Start()
+    {
+        GuageManager.Instance.player = this.transform;
+    }
+
     void Update()
     {
         input = Input.GetAxisRaw("Horizontal");

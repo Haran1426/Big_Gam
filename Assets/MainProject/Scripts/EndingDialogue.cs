@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EndingDialogue : MonoBehaviour
 {
@@ -24,13 +25,13 @@ public class EndingDialogue : MonoBehaviour
 
     void Start()
     {
-        StartDialogue(currentProp);
+        StartCoroutine(Co_StartRoutine());
     }
 
     IEnumerator Co_StartRoutine()
     {
         yield return new WaitForSeconds(1.7f);
-        StartDialogue(currentProp);
+        StartDialogue(GuageManager.Instance.GetEndingProp());
     }
 
     void Update()
@@ -49,6 +50,8 @@ public class EndingDialogue : MonoBehaviour
 
                 isWritingText = false;
                 dialogueText.text = currentDialogue.dialogueText;
+
+                SceneManager.LoadScene("Title");
             }
             else
             {
