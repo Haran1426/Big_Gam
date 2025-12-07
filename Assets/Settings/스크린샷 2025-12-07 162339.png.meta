@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63253115c7848473f8746783d92cb2d6
+guid: c38afac664009b6469b4e707d2119eed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1108013189556459347
-    second: an orange city_0
+      213: 6750094300417819659
+    second: "\uC2A4\uD06C\uB9B0\uC0F7 2025-12-07 162339_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: an orange city_0
+      name: "\uC2A4\uD06C\uB9B0\uC0F7 2025-12-07 162339_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2000
-        height: 1000
+        width: 803
+        height: 451
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da82a06efdb8f90f0800000000000000
-      internalID: -1108013189556459347
+      spriteID: b040bc0b0072dad50800000000000000
+      internalID: 6750094300417819659
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      an orange city_0: -1108013189556459347
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
