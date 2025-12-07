@@ -8,7 +8,7 @@
         [Toggle] _IsActive ("Is Active", Float) = 1.0
         
         _TwistStrength ("Twist Strength", Float) = 10.0
-        _Speed ("Rotation Speed", Float) = 3.0
+        _Speed ("Rotation Speed", Float) = 30.0
         _CenterX ("Center X (0-1)", Float) = 0.5
         _CenterY ("Center Y (0-1)", Float) = 0.5
     }

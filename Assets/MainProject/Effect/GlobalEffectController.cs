@@ -5,7 +5,12 @@ public class GlobalEffectController : MonoBehaviour
     [Header("Settings")]
     public Material screenEffectMaterial;
 
-    // 게임 도중 이 변수를 조절하면 화면이 바뀝니다.
+    [Header("Animation Settings")]
+    [Tooltip("활성화되었을 때 도달할 최대 비틀기 강도")]
+    public float targetTwist = 100f;
+    [Tooltip("변화하는 속도 (높을수록 빠름)")]
+    public float transitionSpeed = 5.0f;
+
     [Range(-100f, 100f)]
     public float currentTwist = 0f;
 
@@ -15,6 +20,12 @@ public class GlobalEffectController : MonoBehaviour
     private int twistPropID;
     private int ActivePropID;
 
+    public static GlobalEffectController Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         twistPropID = Shader.PropertyToID("_TwistStrength");
@@ -23,11 +34,14 @@ public class GlobalEffectController : MonoBehaviour
 
     void Update()
     {
+        if (currentActive == 1)
+        {
+            //currentTwist = Mathf.Lerp(currentTwist, targetTwist, Time.deltaTime * transitionSpeed);
+            currentTwist = currentTwist + Time.deltaTime * transitionSpeed;
+        }
+
         if (screenEffectMaterial != null)
         {
-            currentTwist = Mathf.Sin(Time.time * 2.0f) * 3.0f;
-
-
             // 변경된 값을 실제 마테리얼에 적용
             screenEffectMaterial.SetFloat(twistPropID, currentTwist);
             screenEffectMaterial.SetFloat(ActivePropID, currentActive);

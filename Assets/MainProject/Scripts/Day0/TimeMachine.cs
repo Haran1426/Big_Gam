@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimeMachine : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TimeMachine : MonoBehaviour
     public GameObject hintText; 
 
     bool isActivated = false;
+    bool isActivated2 = false;
 
     void Start()
     {
@@ -39,10 +41,17 @@ public class TimeMachine : MonoBehaviour
         if (highlightObject != null)
         {
             // 수리가 이미 끝났으면 하이라이트 안 나오게 하려면 아래처럼 작성
-            if (isActivated) 
-                highlightObject.SetActive(false);
-            else 
+            //if (isActivated) 
+            //    highlightObject.SetActive(false);
+            //else 
                 highlightObject.SetActive(isNear);
+        }
+
+        if(!isActivated2 && isActivated && Input.GetKeyDown(KeyCode.F))
+        {
+            isActivated2 = true;
+            GlobalEffectController.Instance.currentActive = 1;
+            StartCoroutine(LoadSceneAfterDelay(3f));
         }
 
         // 3. 상호작용 로직 (부품 3개 모았을 때만)
@@ -62,5 +71,12 @@ public class TimeMachine : MonoBehaviour
         {
             hintText.SetActive(false);
         }
+    }
+
+    System.Collections.IEnumerator LoadSceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        SceneManager.LoadScene("Day1");
     }
 }
