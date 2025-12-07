@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 25dbd8f4509764aafbe4372c2c2da9d4
+guid: 8530675e45bc44246ae902d6fd3c9cd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -278975047562338264
-    second: Alpha_Day2Object_0
+      213: 4130640169021434097
+    second: 5_0
   - first:
-      213: 1884877418547778639
-    second: Alpha_Day2Object_1
+      213: -7200132072931614835
+    second: 5_1
   - first:
-      213: 8624100784333401077
-    second: Alpha_Day2Object_2
+      213: -3609754129978504188
+    second: 5_2
   - first:
-      213: 8728930335989865317
-    second: Alpha_Day2Object_3
+      213: -4309224192539515645
+    second: 5_3
   - first:
-      213: -2458735506474976531
-    second: Alpha_Day2Object_4
-  - first:
-      213: 8292891936918121918
-    second: Alpha_Day2Object_5
+      213: 2426446623490865320
+    second: 5_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Alpha_Day2Object_0
+      name: 5_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 47
-        width: 498
-        height: 392
+        x: 0
+        y: 0
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82069dc1ca1e02cf0800000000000000
-      internalID: -278975047562338264
+      spriteID: 1f86b71495bf25930800000000000000
+      internalID: 4130640169021434097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alpha_Day2Object_1
+      name: 5_1
       rect:
         serializedVersion: 2
-        x: 533
-        y: 218
-        width: 348
-        height: 467
+        x: 79
+        y: 0
+        width: 82
+        height: 66
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4412b1960e682a10800000000000000
-      internalID: 1884877418547778639
+      spriteID: d8f9301170ef31c90800000000000000
+      internalID: -7200132072931614835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alpha_Day2Object_2
+      name: 5_2
       rect:
         serializedVersion: 2
-        x: 975
-        y: 241
-        width: 324
-        height: 383
+        x: 190
+        y: 0
+        width: 99
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fb2c5d88f5fea770800000000000000
-      internalID: 8624100784333401077
+      spriteID: 40cc12c7eb397edc0800000000000000
+      internalID: -3609754129978504188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alpha_Day2Object_3
+      name: 5_3
       rect:
         serializedVersion: 2
-        x: 1300
-        y: 10
-        width: 162
-        height: 302
+        x: 348
+        y: 0
+        width: 92
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56b9ec984e3632970800000000000000
-      internalID: 8728930335989865317
+      spriteID: 305a92a9d6f8234c0800000000000000
+      internalID: -4309224192539515645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Alpha_Day2Object_4
+      name: 5_4
       rect:
         serializedVersion: 2
-        x: 577
-        y: 13
-        width: 547
-        height: 166
+        x: 467
+        y: 0
+        width: 109
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,30 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dea3be37511d0edd0800000000000000
-      internalID: -2458735506474976531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Alpha_Day2Object_5
-      rect:
-        serializedVersion: 2
-        x: 1134
-        y: 46
-        width: 159
-        height: 118
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebda4bc6745461370800000000000000
-      internalID: 8292891936918121918
+      spriteID: 8a87e9329587ca120800000000000000
+      internalID: 2426446623490865320
       vertices: []
       indices: 
       edges: []
@@ -259,13 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Alpha_Day2Object_0: -278975047562338264
-      Alpha_Day2Object_1: 1884877418547778639
-      Alpha_Day2Object_2: 8624100784333401077
-      Alpha_Day2Object_3: 8728930335989865317
-      Alpha_Day2Object_4: -2458735506474976531
-      Alpha_Day2Object_5: 8292891936918121918
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
