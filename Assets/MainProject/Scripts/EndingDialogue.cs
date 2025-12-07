@@ -27,6 +27,12 @@ public class EndingDialogue : MonoBehaviour
         StartDialogue(currentProp);
     }
 
+    IEnumerator Co_StartRoutine()
+    {
+        yield return new WaitForSeconds(1.7f);
+        StartDialogue(currentProp);
+    }
+
     void Update()
     {
         if (!isDialogueActive) return;

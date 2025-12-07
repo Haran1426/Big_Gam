@@ -37,7 +37,6 @@ public class PropBase : MonoBehaviour
                 {
                     DialogueSystem.Instance.StartDialogue(subPropData);
                 }
-                Debug.Log($"Prop is Colliding with Player: {propData.propID}"); 
                 isPlayerNearby = true;
             }
         }
