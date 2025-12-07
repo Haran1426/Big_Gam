@@ -52,7 +52,7 @@ public class DialogueButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointe
         if (instanceMaterial != null) instanceMaterial.SetFloat("_DissolveAmount", 0);
 
         // 연출: 세로로 늘어남 (Elastic 느낌 살짝 추가)
-        rectTransform.DOScaleY(1f, 0.5f)
+        rectTransform.DOScaleY(1f, 0.2f)
             .SetEase(Ease.OutBack)
             .SetDelay(delay);
 
@@ -66,8 +66,8 @@ public class DialogueButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointe
         if (!button.interactable) return;
 
         outline.enabled = true;
-        outline.DOColor(hoverOutlineColor, 0.2f);
-        outline.DOFade(0.5f, 0.2f); // 두께감 대신 알파나 거리로 조절 가능
+        outline.DOColor(hoverOutlineColor, 0.4f);
+        outline.DOFade(1f, 0.4f); // 두께감 대신 알파나 거리로 조절 가능
 
         // 위로 살짝 올라감
         rectTransform.DOAnchorPosY(originalPos.y + hoverMoveDistance, 0.2f);
@@ -123,7 +123,7 @@ public class DialogueButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointe
         if (instanceMaterial != null)
         {
             // 쉐이더의 _DissolveAmount 값을 0 -> 1로 변경
-            DOVirtual.Float(0, 1, 0.6f, (value) =>
+            DOVirtual.Float(0, 1, 1f, (value) =>
             {
                 instanceMaterial.SetFloat("_DissolveAmount", value);
             }).OnComplete(() => gameObject.SetActive(false));
