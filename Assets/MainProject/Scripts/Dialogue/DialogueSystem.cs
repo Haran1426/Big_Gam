@@ -19,6 +19,8 @@ public class DialogueSystem : MonoBehaviour
     public bool isDialogueActive = false;
     private Coroutine typingCoroutine;
 
+    private bool isRandomOneShot = false;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -46,7 +48,23 @@ public class DialogueSystem : MonoBehaviour
             }
             else
             {
-                NextDialogue();
+                if (isRandomOneShot)
+                {
+                    GuageManager.Instance.AddGuageValue(GuageType.Evironment, currentDialogue.evironmentGuageChange);
+                    GuageManager.Instance.AddGuageValue(GuageType.Economy, currentDialogue.economyGuageChange);
+                    GuageManager.Instance.AddGuageValue(GuageType.Happiness, currentDialogue.happinessGuageChange);
+                    GuageManager.Instance.AddGuageValue(GuageType.Security, currentDialogue.securityGaugeChange);
+
+                    GuageManager.Instance.UpdateGuageUI();
+
+                    isDialogueActive = false;
+                    dialogueUI.SetActive(false);
+                    isRandomOneShot = false;
+                }
+                else
+                {
+                    NextDialogue();
+                }
             }
         }
     }
@@ -54,6 +72,13 @@ public class DialogueSystem : MonoBehaviour
     private void NextDialogue()
     {
         currentDialogueIndex++;
+
+        GuageManager.Instance.AddGuageValue(GuageType.Evironment, currentDialogue.evironmentGuageChange);
+        GuageManager.Instance.AddGuageValue(GuageType.Economy, currentDialogue.economyGuageChange);
+        GuageManager.Instance.AddGuageValue(GuageType.Happiness, currentDialogue.happinessGuageChange);
+        GuageManager.Instance.AddGuageValue(GuageType.Security, currentDialogue.securityGaugeChange);
+
+        GuageManager.Instance.UpdateGuageUI();
 
         if (currentProp != null && currentDialogueIndex < currentProp.dialogues.Length)
         {
@@ -81,6 +106,42 @@ public class DialogueSystem : MonoBehaviour
 
     public void StartDialogue(DialogueData dialogue)
     {
+        isRandomOneShot = false;
+
+        if (dialogue.dialogueType == DialogueType.Random)
+        {
+            if (currentProp == null || currentProp.dialogues == null || currentProp.dialogues.Length <= 1)
+            {
+                return;
+            }
+
+            int randomIndex = Random.Range(1, currentProp.dialogues.Length);
+            DialogueData randomDialogue = currentProp.dialogues[randomIndex];
+
+            isRandomOneShot = true;
+
+            isDialogueActive = true;
+            dialogueUI.SetActive(true);
+
+            currentDialogue = randomDialogue;
+            characterNameText.text = randomDialogue.characterName;
+
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine);
+                typingCoroutine = null;
+            }
+
+            foreach (var btn in optionButtons)
+            {
+                btn.GetComponent<UnityEngine.UI.Button>().onClick.RemoveAllListeners();
+                btn.SetActive(false);
+            }
+
+            typingCoroutine = StartCoroutine(Co_WriteText(randomDialogue.dialogueText));
+            return;
+        }
+
         isDialogueActive = true;
         dialogueUI.SetActive(true);
 
