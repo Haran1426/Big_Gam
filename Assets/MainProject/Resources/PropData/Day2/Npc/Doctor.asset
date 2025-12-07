@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Doctor
+  m_EditorClassIdentifier: 
+  propID: Doctor
+  interactiveAreaSize: {x: 1, y: 2}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Dr. White
+    dialogueText: Mayor... please tighten your mask. The air is bad here.
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Dr. White
+    dialogueText: A 7-year-old just died... his lungs hardened like an old man's.
+      I couldn't do anything.
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Dr. White
+    dialogueText: Choose? What do you mean?
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Dr. White
+    dialogueText: The rich use private oxygen tanks. Do the poor not deserve to breathe?
+    branches:
+    - optionText: What's the situation?
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: As you can see, it's hell. The ER is full, and oxygen tanks
+          are empty. Give us an emergency budget right now... or decide 'who to save
+          and who to abandon'.
+        branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Player
+    dialogueText: Choose? What do you mean?
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: Player
+    dialogueText: One oxygen tank, two patients. The rich person or the young worker?
+      You decide, Mayor.
+    branches:
+    - optionText: Full Support
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -30
+        happinessGuageChange: 30
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Nothing is more important than life. Use the entire budget!
+        branches: []
+    - optionText: Partial Support
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: -10
+        happinessGuageChange: 10
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Just handle the urgent cases. Minimum support only.
+        branches: []
+    - optionText: Worker First
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 10
+        happinessGuageChange: -10
+        securityGaugeChange: 0
+        characterName: 
+        dialogueText: Treat the young worker first to keep the economy running.
+        branches: []
+    - optionText: Rich First
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 25
+        happinessGuageChange: -30
+        securityGaugeChange: -5
+        characterName: 
+        dialogueText: Accept those who can pay high medical bills.
+        branches: []
+    - optionText: Reject Support
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 10
+        happinessGuageChange: -40
+        securityGaugeChange: -15
+        characterName: 
+        dialogueText: People die eventually. We have no budget, let's give up.
+        branches: []
