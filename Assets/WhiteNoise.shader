@@ -1,4 +1,4 @@
-Shader "Custom/OldTVNoise2D"
+Shader "Universal Render Pipeline/2D/OldTVNoise_ScreenSpace"
 {
     Properties
     {
@@ -6,59 +6,73 @@ Shader "Custom/OldTVNoise2D"
         _Tint ("Tint", Color) = (1,1,1,1)
 
         _NoiseIntensity ("Noise Intensity", Range(0,1)) = 0.4   // 노이즈 강도
-        _NoiseScale ("Noise Scale", Range(1,500)) = 80          // 노이즈 입자 크기
-        _NoiseSpeed ("Noise Speed", Range(0,10)) = 3            // 노이즈 움직임 속도
+        _NoiseScale ("Noise Scale", Range(1,3000)) = 800        // 도트 크기 (화면 기준)
+        _NoiseSpeed ("Noise Speed", Range(0,50)) = 10           // 패턴 갱신 속도
     }
+
     SubShader
     {
         Tags
         {
             "Queue"="Transparent"
             "RenderType"="Transparent"
+            "RenderPipeline"="UniversalPipeline"
+            "UniversalMaterialType"="SpriteUnlit"
             "CanUseSpriteAtlas"="True"
         }
 
-        Cull Off
-        Lighting Off
         ZWrite Off
+        Cull Off
         Blend One OneMinusSrcAlpha
 
         Pass
         {
-            CGPROGRAM
+            Name "Forward"
+            HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #include "UnityCG.cginc"
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            float4 _Tint;
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
-            float _NoiseIntensity;
-            float _NoiseScale;
-            float _NoiseSpeed;
+            TEXTURE2D(_MainTex);
+            SAMPLER(sampler_MainTex);
 
-            struct appdata
+            CBUFFER_START(UnityPerMaterial)
+                float4 _MainTex_ST;
+                float4 _Tint;
+                float  _NoiseIntensity;
+                float  _NoiseScale;
+                float  _NoiseSpeed;
+            CBUFFER_END
+
+            struct Attributes
             {
-                float4 vertex : POSITION;
-                float2 uv     : TEXCOORD0;
-                float4 color  : COLOR;
+                float4 positionOS : POSITION;
+                float2 uv         : TEXCOORD0;
+                float4 color      : COLOR;
             };
 
-            struct v2f
+            struct Varyings
             {
-                float4 pos    : SV_POSITION;
-                float2 uv     : TEXCOORD0;
-                float4 color  : COLOR;
+                float4 positionHCS : SV_POSITION;
+                float2 uv          : TEXCOORD0;
+                float4 color       : COLOR;
+                float2 screenUV    : TEXCOORD1;   // 화면 기준 좌표
             };
 
-            v2f vert (appdata v)
+            Varyings vert (Attributes IN)
             {
-                v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex);
-                o.uv  = TRANSFORM_TEX(v.uv, _MainTex);
-                o.color = v.color * _Tint;
-                return o;
+                Varyings OUT;
+                float4 pos = TransformObjectToHClip(IN.positionOS.xyz);
+                OUT.positionHCS = pos;
+                OUT.uv          = TRANSFORM_TEX(IN.uv, _MainTex);
+                OUT.color       = IN.color * _Tint;
+
+                // NDC(-1~1) -> 0~1 스크린 UV
+                float2 ndc = pos.xy / pos.w;
+                OUT.screenUV = ndc * 0.5f + 0.5f;
+
+                return OUT;
             }
 
             // 간단한 2D 해시 함수 (의사 랜덤)
@@ -69,24 +83,32 @@ Shader "Custom/OldTVNoise2D"
                 return frac(p.x * p.y);
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            half4 frag (Varyings IN) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv) * i.color;
+                // 스프라이트 기본 색
+                half4 col = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, IN.uv) * IN.color;
 
-                // 노이즈용 좌표 (x는 UV, y는 시간 기반으로 변함)
-                float2 noiseUV = float2(i.uv.x * _NoiseScale, _Time.y * _NoiseSpeed);
+                // 🔹 화면 기준 도트 노이즈 좌표
+                float2 noisePos = IN.screenUV * _NoiseScale;
 
-                // 0~1 랜덤 값
-                float n = hash21(noiseUV);
+                // 도트 그리드
+                float2 grid1 = floor(noisePos);
+                float2 grid2 = floor(noisePos * 0.73);
 
-                // -1 ~ 1 범위로 변환
-                float noise = (n - 0.5) * 2.0;
+                // 시간은 랜덤 시드로만 사용 (스크롤 X)
+                float t = _Time.y * _NoiseSpeed;
 
-                // 밝기에 노이즈 적용
+                float n1 = hash21(grid1 + float2(t, t * 7.123));
+                float n2 = hash21(grid2 - float2(t * 3.1, t * 1.7));
+
+                float nMix = (n1 + n2 * 0.7) / 1.7; // 대략 0~1
+                float noise = (nMix - 0.5) * 2.0;   // -1~1
+
                 col.rgb += noise * _NoiseIntensity;
-
-                // 색상 범위 유지
                 col.rgb = saturate(col.rgb);
-
                 return col;
             }
+            ENDHLSL
+        }
+    }
+}
