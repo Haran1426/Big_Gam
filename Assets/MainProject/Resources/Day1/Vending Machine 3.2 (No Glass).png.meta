@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vending Machine 3.2 (No Glass)_0: -781589493787494695
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
