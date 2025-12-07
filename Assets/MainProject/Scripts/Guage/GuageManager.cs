@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
@@ -23,6 +23,8 @@ public class GuageManager : MonoBehaviour
     public Slider economySlider;
     public Slider happinessSlider;
     public Slider securitySlider;
+
+    public Transform player;
 
     void Awake()
     {
@@ -51,15 +53,19 @@ public class GuageManager : MonoBehaviour
         {
             case GuageType.Evironment:
                 evironmentValue += value;
+                FloatingPairSpawner.Instance.SpawnFloatingPair(0, (int)value, player);
                 break;
             case GuageType.Economy:
                 economyValue += value;
+                FloatingPairSpawner.Instance.SpawnFloatingPair(1, (int)value, player);
                 break;
             case GuageType.Happiness:
                 happinessValue += value;
+                FloatingPairSpawner.Instance.SpawnFloatingPair(2, (int)value, player);
                 break;
             case GuageType.Security:
                 securityValue += value;
+                FloatingPairSpawner.Instance.SpawnFloatingPair(3, (int)value, player);
                 break;
         }
 
