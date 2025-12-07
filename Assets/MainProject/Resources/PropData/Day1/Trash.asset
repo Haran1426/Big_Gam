@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Trash
+  m_EditorClassIdentifier: 
+  propID: 
+  interactiveAreaSize: {x: 3, y: 3}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Unsorted trash is rolling on the floor.
+    branches:
+    - optionText: Ignore
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -10
+        economyGuageChange: 0
+        happinessGuageChange: -5
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: Too annoying. Not my business.
+        branches: []
+    - optionText: Stomp It
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: 0
+        happinessGuageChange: 5
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: Stomp it down to make room.
+        branches: []
+    - optionText: Recycle
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 10
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: Take time to remove the labels and sort.
+        branches: []
+    - optionText: Report
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: -5
+        securityGaugeChange: 5
+        characterName: Player
+        dialogueText: Where is the cleaning service? Report them!
+        branches: []
