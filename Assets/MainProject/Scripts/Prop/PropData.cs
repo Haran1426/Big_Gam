@@ -4,7 +4,8 @@ using UnityEngine;
 public enum DialogueType
 {
     Normal,
-    Branch
+    Branch,
+    Random
 }
 
 [Serializable]
@@ -26,6 +27,12 @@ public class DialogueData
     [Range(0f, 100f)]
     [Tooltip("행동 게이지 감소 비율 (0~1)")]
     public float actionGaugeReductionRate = 0f;
+
+    [Header("기타 게이지 변화")]
+    public float evironmentGuageChange = 0f;
+    public float economyGuageChange = 0f;
+    public float happinessGuageChange = 0f;
+    public float securityGaugeChange = 0f;
 
     public string characterName;
 
