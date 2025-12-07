@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      free-icon-updown-18154503_0: 125851544201036489
+      free-icon-updown-18154503_1: -5102488828737798559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

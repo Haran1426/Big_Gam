@@ -6,7 +6,6 @@ public class FloatingPairSpawner : MonoBehaviour
 {
     public Sprite[] mainImages;
     public Sprite upSprite;
-    public Sprite middleSprite;
     public Sprite downSprite;
 
     public GameObject floatingPairPrefab;
@@ -35,8 +34,21 @@ public class FloatingPairSpawner : MonoBehaviour
         Instance = this;
     }
 
-    public void SpawnFloatingPair(int pairIndex, int subType, Transform targetPos)
+    public void SpawnFloatingPair(int pairIndex, int amount, Transform targetPos)
     {
+        int subType;
+        if (amount > 0)
+        {
+            subType = 1;
+        }
+        else if (amount < 0)
+        {
+            subType = 2;
+        }
+        else
+        {
+            return;
+        }
         // 요청을 큐에 넣기
         spawnQueue.Enqueue(new SpawnRequest()
         {
@@ -87,8 +99,7 @@ public class FloatingPairSpawner : MonoBehaviour
         switch (subType)
         {
             case 1: subR.sprite = upSprite; break;
-            case 2: subR.sprite = middleSprite; break;
-            case 3: subR.sprite = downSprite; break;
+            case 2: subR.sprite = downSprite; break;
         }
 
         stackCounts[targetPos]++;
