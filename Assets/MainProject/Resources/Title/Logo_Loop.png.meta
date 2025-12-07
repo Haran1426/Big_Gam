@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0851a26f1f6b9a048ac6300fcdcf66da
+guid: 98d1a6bf1d42c4d498b430d99d518d9b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8746685627112466807
-    second: Button_04_0
+      213: 679479001946649007
+    second: Logo_Loop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_04_0
+      name: Logo_Loop_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 38
+        y: 60
+        width: 78
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 8, z: 14, w: 11}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 779ad066c38726970800000000000000
-      internalID: 8746685627112466807
+      spriteID: fa1fd5f5d8efd6900800000000000000
+      internalID: 679479001946649007
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 17e11998646ca49c5ba5eff8fb160920
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Button_04_0: 8746685627112466807
+      Logo_Loop_0: 679479001946649007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

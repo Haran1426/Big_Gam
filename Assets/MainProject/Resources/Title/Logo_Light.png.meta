@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0851a26f1f6b9a048ac6300fcdcf66da
+guid: a5fdf11188aa6457cb29c379e766e093
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8746685627112466807
-    second: Button_04_0
+      213: -449584014308797451
+    second: Logo_Light_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,8 +49,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.3532958, y: 0.72150767}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -100,23 +100,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_04_0
+      name: Logo_Light_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 8, z: 14, w: 11}
+        x: 30
+        y: 14
+        width: 93
+        height: 87
+      alignment: 9
+      pivot: {x: 0.40457425, y: 0.73801595}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 779ad066c38726970800000000000000
-      internalID: 8746685627112466807
+      spriteID: 5f31e6298b1c2c9f0800000000000000
+      internalID: -449584014308797451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo_Light_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 70
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124d135166c42447a98e485df7b45130
+      internalID: -679222738
       vertices: []
       indices: 
       edges: []
@@ -125,8 +147,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 17e11998646ca49c5ba5eff8fb160920
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -135,7 +157,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Button_04_0: 8746685627112466807
+      Logo_Light_0: -449584014308797451
+      Logo_Light_1: -679222738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
