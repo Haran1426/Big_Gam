@@ -4156,7 +4156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propData: {fileID: 11400000, guid: 9a80d4599e12441e4833c60f907c7e18, type: 2}
-  subPropData: {fileID: 0}
+  subPropData: {fileID: 11400000, guid: 6b79182af02b84d889ae9323639ba55a, type: 2}
   outline: {fileID: 764531422}
   isAlreadyInteracted: 0
 --- !u!1 &417852778
@@ -5934,7 +5934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propData: {fileID: 11400000, guid: 608bb4d2a7c0d41499472888c660c9c6, type: 2}
-  subPropData: {fileID: 0}
+  subPropData: {fileID: 11400000, guid: cc03d5ba75352431e94f9047282a3377, type: 2}
   outline: {fileID: 16124347}
   isAlreadyInteracted: 0
 --- !u!1 &594375342
@@ -6039,7 +6039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propData: {fileID: 11400000, guid: 02e5d978bc074421cb998cf09ade637b, type: 2}
-  subPropData: {fileID: 0}
+  subPropData: {fileID: 11400000, guid: 5f7d739a2145942038a8e05cc4c68d5e, type: 2}
   outline: {fileID: 763438805}
   isAlreadyInteracted: 0
 --- !u!1 &594712272
@@ -19844,7 +19844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   propData: {fileID: 11400000, guid: ec38f6eb17fc84c829ba744dda817434, type: 2}
-  subPropData: {fileID: 0}
+  subPropData: {fileID: 11400000, guid: f06c79232a63c4c90babf0155af0ce6c, type: 2}
   outline: {fileID: 37626902}
   isAlreadyInteracted: 0
 --- !u!1 &1318232897
