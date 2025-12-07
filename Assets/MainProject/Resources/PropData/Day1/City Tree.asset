@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: City Tree
+  m_EditorClassIdentifier: 
+  propID: 
+  interactiveAreaSize: {x: 3, y: 8}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: 'Sign says: This tree will be cut down for road expansion.'
+    branches:
+    - optionText: Approve Work
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -15
+        economyGuageChange: 15
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: Wider roads help business. Cut it down.
+        branches: []
+    - optionText: Oppose
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 15
+        economyGuageChange: -10
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: A single tree in the city is precious. Oppose it.
+        branches: []
+    - optionText: Transplant
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 5
+        economyGuageChange: -20
+        happinessGuageChange: 10
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: Even if it costs money, move it somewhere else.
+        branches: []
+    - optionText: Graffiti
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: 0
+        happinessGuageChange: 0
+        securityGaugeChange: -5
+        characterName: Player
+        dialogueText: Carve 'OOO was here' on the tree.
+        branches: []

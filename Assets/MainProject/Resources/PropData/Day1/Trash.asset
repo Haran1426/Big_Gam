@@ -10,55 +10,62 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
-  m_Name: npc 1
+  m_Name: Trash
   m_EditorClassIdentifier: 
   propID: 
   interactiveAreaSize: {x: 3, y: 3}
   interactiveAreaOffset: {x: 0, y: 0}
   dialogues:
-  - dialogueType: 0
-    actionGaugeReductionRate: 41
-    characterName: Mr.Gold
-    dialogueText: Mayor, business is all about timing. We need to row when the tide
-      is high. I want to run the factory at full capacity, 24 hours a day.
-    branches: []
-  - dialogueType: 0
-    actionGaugeReductionRate: 0
-    characterName: Player
-    dialogueText: That will exceed emission limits.
-    branches: []
   - dialogueType: 1
     actionGaugeReductionRate: 0
-    characterName: Mr.Gold
-    dialogueText: Hey, let's be flexible. Instead, I'll make a huge donation to your
-      'Smart City' project. The factory runs, the city earns, and workers get paid.
-      Isn't this a Win-Win? Just sign here.
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Unsorted trash is rolling on the floor.
     branches:
-    - optionText: Approval
+    - optionText: Ignore
       nextDialogue:
         dialogueType: 0
         actionGaugeReductionRate: 0
+        evironmentGuageChange: -10
+        economyGuageChange: 0
+        happinessGuageChange: -5
+        securityGaugeChange: 0
         characterName: Player
-        dialogueText: Fine. Economy comes first. Run it freely.
+        dialogueText: Too annoying. Not my business.
         branches: []
-    - optionText: Strengthen
+    - optionText: Stomp It
       nextDialogue:
         dialogueType: 0
         actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: 0
+        happinessGuageChange: 5
+        securityGaugeChange: 0
         characterName: Player
-        dialogueText: Follow the law. Exceed limits and I shut you down.
+        dialogueText: Stomp it down to make room.
         branches: []
-    - optionText: Allow
+    - optionText: Recycle
       nextDialogue:
         dialogueType: 0
         actionGaugeReductionRate: 0
+        evironmentGuageChange: 10
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 0
         characterName: Player
-        dialogueText: Run it secretly at night. Avoid public complaints.
+        dialogueText: Take time to remove the labels and sort.
         branches: []
-    - optionText: Accept Bribe
+    - optionText: Report
       nextDialogue:
         dialogueType: 0
         actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: -5
+        securityGaugeChange: 5
         characterName: Player
-        dialogueText: Not a donation... send it to my personal account.
+        dialogueText: Where is the cleaning service? Report them!
         branches: []

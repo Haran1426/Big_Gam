@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Broken Machine
+  m_EditorClassIdentifier: 
+  propID: 
+  interactiveAreaSize: {x: 3.67, y: 4.36}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: The low power warning is blinking.
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: Forcing it to work will consume lots of electricity.
+    branches:
+    - optionText: Use It
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: 10
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: I can't stand being thirsty. Draw the electricity.
+        branches: []
+    - optionText: Endure
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 5
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: Player
+        dialogueText: Let's save energy. I'll just endure.
+        branches: []
+    - optionText: Kick It
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: 5
+        securityGaugeChange: -5
+        characterName: Player
+        dialogueText: Why won't it work?! (Bang!)
+        branches: []
