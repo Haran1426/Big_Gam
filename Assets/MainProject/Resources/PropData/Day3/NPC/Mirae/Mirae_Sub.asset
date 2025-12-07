@@ -22,6 +22,15 @@ MonoBehaviour:
     economyGuageChange: 0
     happinessGuageChange: 0
     securityGaugeChange: 0
+    characterName: 
+    dialogueText: 
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
     characterName: Mirae
     dialogueText: (Smiling weakly) Mister... you'll be alone soon too. Everyone's
       gone...
