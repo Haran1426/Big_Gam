@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239079766578637274}
-  - component: {fileID: 8179284261560993184}
   - component: {fileID: 6288395139361404623}
   m_Layer: 0
   m_Name: EffectManager
@@ -33,26 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8179284261560993184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8935601390447184670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffee16f796c7e574ba7adf7b5f1641ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainImages:
-  - {fileID: -2648937144575442912, guid: 9e4d37b808a1cb545988416edcac23aa, type: 3}
-  upSprite: {fileID: 125851544201036489, guid: ab0fddc43d9e3664a8b44472461161fe, type: 3}
-  middleSprite: {fileID: 4954345118388884524, guid: f3634a028e8184a44a73afead93825a7, type: 3}
-  downSprite: {fileID: -5102488828737798559, guid: ab0fddc43d9e3664a8b44472461161fe, type: 3}
-  floatingPairPrefab: {fileID: 2821449451918798546, guid: 5717894f0df5bd54baf89fda4493e4fd, type: 3}
-  stackSpacing: 1
-  cooltime: 0.5
 --- !u!114 &6288395139361404623
 MonoBehaviour:
   m_ObjectHideFlags: 0

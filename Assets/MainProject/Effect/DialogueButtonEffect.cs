@@ -16,7 +16,7 @@ public class DialogueButtonEffect : MonoBehaviour, IPointerEnterHandler, IPointe
     [Header("Settings")]
     public Color hoverOutlineColor = Color.red;
     public Color normalOutlineColor = new Color(0, 0, 0, 0.5f);
-    public float hoverMoveDistance = 4f;
+    public float hoverMoveDistance = 20f;
 
     private Vector2 originalPos;
     private Material instanceMaterial; // 쉐이더 제어용
