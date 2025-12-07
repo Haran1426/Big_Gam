@@ -51,6 +51,7 @@ public class TimeMachine : MonoBehaviour
         {
             isActivated2 = true;
             GlobalEffectController.Instance.currentActive = 1;
+            FadeManager.Instance.DayIndex++;
             StartCoroutine(LoadSceneAfterDelay(3f));
         }
 

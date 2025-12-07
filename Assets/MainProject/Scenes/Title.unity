@@ -586,9 +586,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc957582717b5ab498684cb0ce22e680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   fadeCanvasGroup: {fileID: 0}
   fadeImage: {fileID: 0}
+  DayIndex: 0
   fadeDuration: 1
+  text: {fileID: 0}
 --- !u!4 &510688551
 Transform:
   m_ObjectHideFlags: 0
