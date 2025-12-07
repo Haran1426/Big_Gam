@@ -63,12 +63,14 @@ public class PlayerMove2D : MonoBehaviour
     {
         bool isGoal = Physics2D.OverlapCircle(transform.position, 0.5f, goalMask);
 
-        if(sceneIndex == 4 || isGoal)
+        if(sceneIndex == 4 && isGoal)
         {
+            FadeManager.Instance.DayIndex = 4;
             FadeManager.Instance.LoadSceneWithFade("Ending");
         }
-        if(isGoal)
+        else if(isGoal)
         {
+            FadeManager.Instance.DayIndex++;
             FadeManager.Instance.LoadSceneWithFade($"Day{sceneIndex}");
         }
     }

@@ -3,17 +3,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using TMPro;
 
 public class FadeManager : MonoBehaviour
 {
     public static FadeManager Instance;
 
+    public TMP_FontAsset FontAsset;
+
     [Header("UI Reference")]
     public CanvasGroup fadeCanvasGroup;
     public Image fadeImage;
 
+    public int DayIndex;
+
     [Header("Settings")]
     public float fadeDuration = 1.0f; // 페이드 걸리는 시간
+
+    public TextMeshProUGUI text;
+
+    public GameObject canvasObj;
+    public GameObject imageObj;
+    public GameObject textObj;
 
     private void Awake()
     {
@@ -35,7 +46,7 @@ public class FadeManager : MonoBehaviour
     private void SetupFadeUI()
     {
         // 1. 캔버스 생성
-        GameObject canvasObj = new GameObject("FadeCanvas");
+        canvasObj = new GameObject("FadeCanvas");
         canvasObj.transform.SetParent(transform);
         Canvas canvas = canvasObj.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -47,12 +58,29 @@ public class FadeManager : MonoBehaviour
         fadeCanvasGroup.blocksRaycasts = false; // 평소엔 클릭 통과
 
         // 3. 검은 이미지 생성
-        GameObject imageObj = new GameObject("FadeImage");
+        imageObj = new GameObject("FadeImage");
         imageObj.transform.SetParent(canvasObj.transform);
         imageObj.transform.localPosition = Vector3.zero;
 
         fadeImage = imageObj.AddComponent<Image>();
         fadeImage.color = Color.black;
+
+        if (DayIndex != 4)
+        {
+            textObj = new GameObject("DayText");
+            textObj.transform.SetParent(canvasObj.transform);
+            textObj.transform.localPosition = Vector3.zero;
+
+            text = textObj.AddComponent<TextMeshProUGUI>();
+            text.font = FontAsset;
+            text.fontSize *= 2;
+            text.rectTransform.sizeDelta *= 2;
+            text.text = $"Day {DayIndex}";
+        }
+        else if (DayIndex == 4)
+        {
+            DayIndex = 0;
+        }
 
         // 화면 꽉 채우기
         RectTransform rect = imageObj.GetComponent<RectTransform>();
@@ -67,6 +95,7 @@ public class FadeManager : MonoBehaviour
     /// </summary>
     public void LoadSceneWithFade(string sceneName)
     {
+        if (fadeCanvasGroup == null) SetupFadeUI();
         StartCoroutine(Co_SceneTransition(sceneName));
     }
 
@@ -83,6 +112,9 @@ public class FadeManager : MonoBehaviour
 
         // 3. 페이드 인 (화면이 다시 밝아짐)
         yield return StartCoroutine(Fade(0f));
+        Destroy(textObj);
+        Destroy(imageObj);
+        Destroy(canvasObj);
     }
 
     // 페이드 동작 (targetAlpha: 1이면 검어짐, 0이면 투명해짐)
