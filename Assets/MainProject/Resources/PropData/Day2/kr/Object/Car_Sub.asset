@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Car_Sub
+  m_EditorClassIdentifier: 
+  propID: Car_Sub
+  interactiveAreaSize: {x: 6, y: 2}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 2
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: 
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: "\uC2DC\uAC04\uC740 \uAE08\uC774\uC57C. \uBE44\uCF1C."
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: "\uC6B0\uB9AC \uC544\uBC84\uC9C0\uAC00 \uB204\uAD70\uC9C0 \uC54C\uC544?"
+    branches: []
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: "\uCC3D\uBB38 \uB2EB\uC544! \uC228\uC744 \uBABB \uC26C\uACA0\uB124."
+    branches: []
