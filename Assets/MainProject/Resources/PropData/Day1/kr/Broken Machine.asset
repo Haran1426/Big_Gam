@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343a68ba3da784a898a461dca585b4fa, type: 3}
+  m_Name: Broken Machine
+  m_EditorClassIdentifier: 
+  propID: 
+  interactiveAreaSize: {x: 3.67, y: 4.36}
+  interactiveAreaOffset: {x: 0, y: 0}
+  dialogues:
+  - dialogueType: 0
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: "\uC804\uB825 \uBD80\uC871 \uACBD\uACE0\uB4F1\uC774 \uAE5C\uBE61\uC785\uB2C8\uB2E4."
+    branches: []
+  - dialogueType: 1
+    actionGaugeReductionRate: 0
+    evironmentGuageChange: 0
+    economyGuageChange: 0
+    happinessGuageChange: 0
+    securityGaugeChange: 0
+    characterName: 
+    dialogueText: "\uC5B5\uC9C0\uB85C \uC791\uB3D9\uC2DC\uD0A4\uBA74 \uC804\uAE30\uB97C
+      \uB9CE\uC774 \uBA39\uC744 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4."
+    branches:
+    - optionText: "\uC0AC\uC6A9\uD55C\uB2E4"
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: -5
+        economyGuageChange: 10
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: "\uB098 (\uC2DC\uC7A5)"
+        dialogueText: "\uBAA9\uB9C8\uB978 \uAC74 \uBABB \uCC38\uC9C0. \uC804\uAE30\uB97C
+          \uB04C\uC5B4\uB2E4 \uC4F4\uB2E4."
+        branches: []
+    - optionText: "\uCC38\uB294\uB2E4"
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 5
+        economyGuageChange: -5
+        happinessGuageChange: 0
+        securityGaugeChange: 0
+        characterName: "\uB098 (\uC2DC\uC7A5)"
+        dialogueText: "\uC804\uAE30\uB97C \uC544\uB07C\uC790. \uADF8\uB0E5 \uCC38\uB294\uB2E4."
+        branches: []
+    - optionText: "\uBC1C\uB85C \uCC2C\uB2E4"
+      nextDialogue:
+        dialogueType: 0
+        actionGaugeReductionRate: 0
+        evironmentGuageChange: 0
+        economyGuageChange: 0
+        happinessGuageChange: 5
+        securityGaugeChange: -5
+        characterName: "\uB098 (\uC2DC\uC7A5)"
+        dialogueText: "\uC65C \uC548 \uB3FC?! (\uCF85!)"
+        branches: []
