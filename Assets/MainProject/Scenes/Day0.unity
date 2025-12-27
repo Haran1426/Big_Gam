@@ -1247,14 +1247,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117389739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 879.2951, y: 490.6234, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -80.704895, y: -49.376587, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 121146192}
   - {fileID: 1098446639}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1309020263}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121146191
 GameObject:
@@ -2295,7 +2295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press the F key!
+  m_text: "F\uD0A4\uB97C \uB204\uB974\uC138\uC694!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 528e431654e89f24e9e3522ab803c683, type: 2}
   m_sharedMaterial: {fileID: 1143853938982209321, guid: 528e431654e89f24e9e3522ab803c683, type: 2}
@@ -5847,7 +5847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Parts : 0/3'
+  m_text: "\uBD80\uD488 : 0/3"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9468077d06733304695913eacb9d631c, type: 2}
   m_sharedMaterial: {fileID: -8187139016776215118, guid: 9468077d06733304695913eacb9d631c, type: 2}
@@ -18664,6 +18664,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 117389740}
   - {fileID: 1759140698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33224,10 +33225,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Collect the three parts from the floor and repair the time machine at
-    the far left!
-
-    Interection : F'
+  m_text: "\uBC14\uB2E5\uC5D0\uC11C \uBD80\uD488 3\uAC1C\uB97C \uBAA8\uC544 \uB9E8
+    \uC67C\uCABD\uC5D0 \uC788\uB294 \uD0C0\uC784\uBA38\uC2E0\uC744 \uC218\uB9AC\uD558\uC138\uC694!\r\n\uD0A4:
+    F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -37861,5 +37861,4 @@ SceneRoots:
   - {fileID: 2002318937}
   - {fileID: 1045390310}
   - {fileID: 2106412346}
-  - {fileID: 117389740}
   - {fileID: 1309020263}
