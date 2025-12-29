@@ -2,24 +2,25 @@ using UnityEngine;
 
 public class PropBase : MonoBehaviour
 {
-    public PropData propData;
-    public PropData subPropData;
+    public PropData[] propData;
+    public PropData[] subPropData;
     public GameObject outline;
 
     public bool isAlreadyInteracted = false;
     
     private void OnDrawGizmos() {
+        
         Gizmos.color = Color.cyan;
-        Vector3 center = transform.position + (Vector3)propData.interactiveAreaOffset;
-        Vector3 size = new Vector3(propData.interactiveAreaSize.x, propData.interactiveAreaSize.y, 0.1f);
+        Vector3 center = transform.position + (Vector3)propData[(int)GameManager.Instance.language].interactiveAreaOffset;
+        Vector3 size = new Vector3(propData[(int)GameManager.Instance.language].interactiveAreaSize.x, propData[(int)GameManager.Instance.language].interactiveAreaSize.y, 0.1f);
         Gizmos.DrawWireCube(center, size);
     }
 
     void Update()
     {
         Collider2D[] colliders = Physics2D.OverlapBoxAll(
-            (Vector2)transform.position + propData.interactiveAreaOffset,
-            propData.interactiveAreaSize,
+            (Vector2)transform.position + propData[(int)GameManager.Instance.language].interactiveAreaOffset,
+            propData[(int)GameManager.Instance.language].interactiveAreaSize,
             0f
         );
 
@@ -30,12 +31,12 @@ public class PropBase : MonoBehaviour
             {
                 if(Input.GetKeyDown(KeyCode.F) && !DialogueSystem.Instance.isDialogueActive && !isAlreadyInteracted) 
                 {
-                    DialogueSystem.Instance.StartDialogue(propData);
+                    DialogueSystem.Instance.StartDialogue(propData[(int)GameManager.Instance.language]);
                     isAlreadyInteracted = true;
                 }
                 else if(Input.GetKeyDown(KeyCode.F) && !DialogueSystem.Instance.isDialogueActive && isAlreadyInteracted && subPropData != null) 
                 {
-                    DialogueSystem.Instance.StartDialogue(subPropData);
+                    DialogueSystem.Instance.StartDialogue(subPropData[(int)GameManager.Instance.language]);
                 }
                 isPlayerNearby = true;
             }
