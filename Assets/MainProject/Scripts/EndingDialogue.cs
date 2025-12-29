@@ -1,4 +1,4 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -31,7 +31,7 @@ public class EndingDialogue : MonoBehaviour
     IEnumerator Co_StartRoutine()
     {
         yield return new WaitForSeconds(1.7f);
-        StartDialogue(GuageManager.Instance.GetEndingProp());
+        StartDialogue(GuageManager.Instance.GetEndingProp(GameManager.Instance.GetLanguageSetting()));
     }
 
     void Update()
