@@ -31,7 +31,7 @@ MonoBehaviour:
     economyGuageChange: 0
     happinessGuageChange: 0
     securityGaugeChange: 0
-    characterName: Mirae
+    characterName: "\uBBF8\uB798"
     dialogueText: "(\uD798\uC5C6\uC774 \uC6C3\uC73C\uBA70) \uC544\uC800\uC528\uB3C4...
       \uACE7 \uD63C\uC790\uAC00 \uB420 \uAC70\uC608\uC694. \uB2E4\uB4E4 \uAC00\uBC84\uB838\uC73C\uB2C8\uAE4C..."
     branches: []
