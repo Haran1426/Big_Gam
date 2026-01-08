@@ -33228,7 +33228,7 @@ MonoBehaviour:
   m_text: 'Collect 3 parts from the floor and repair the time machine on the far
     left!
 
-    Key: F'
+    Interection : F'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
