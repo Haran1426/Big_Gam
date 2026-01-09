@@ -92,16 +92,6 @@ MonoBehaviour:
     happinessGuageChange: 0
     securityGaugeChange: 0
     characterName: Police Chief
-    dialogueText: It's not troops we lack. It's 'Authority'! Mayor, we must lock
-      down the city tonight. Not a single rat gets out.
-    branches: []
-  - dialogueType: 0
-    actionGaugeReductionRate: 0
-    evironmentGuageChange: 0
-    economyGuageChange: 0
-    happinessGuageChange: 0
-    securityGaugeChange: 0
-    characterName: Police Chief
     dialogueText: The backlash will be severe...
     branches: []
   - dialogueType: 1

@@ -68,23 +68,11 @@ MonoBehaviour:
         happinessGuageChange: 0
         securityGaugeChange: 0
         characterName: "\uACBD\uCC30\uC11C\uC7A5"
-        dialogueText: "\uD1B5\uC81C \uBD88\uB2A5\uC785\uB2C8\uB2E4. \uC2A4\uBAA8\uADF8\uAC00
-          \uC9D9\uC5B4\uC9C0\uB2C8 CCTV\uB3C4 \uBB34\uC6A9\uC9C0\uBB3C\uC774\uACE0,
-          \uC57D\uD0C8\uC790\uB4E4\uC774 \uC0C1\uC810 \uC720\uB9AC\uB97C \uAE68\uACE0
-          \uB2E4\uB2D9\uB2C8\uB2E4."
+        dialogueText: "(\uC9C0\uB3C4\uB97C \uB0B4\uB824\uCE58\uBA70) \uD1B5\uC81C
+          \uBD88\uB2A5\uC785\uB2C8\uB2E4. \uC2A4\uBAA8\uADF8\uAC00 \uC9D9\uC5B4\uC9C0\uB2C8
+          CCTV\uB3C4 \uBB34\uC6A9\uC9C0\uBB3C\uC774\uACE0, \uC57D\uD0C8\uC790\uB4E4\uC774
+          \uC0C1\uC810 \uC720\uB9AC\uB97C \uAE68\uACE0 \uB2E4\uB2D9\uB2C8\uB2E4."
         branches: []
-  - dialogueType: 0
-    actionGaugeReductionRate: 0
-    evironmentGuageChange: 0
-    economyGuageChange: 0
-    happinessGuageChange: 0
-    securityGaugeChange: 0
-    characterName: "\uACBD\uCC30\uC11C\uC7A5"
-    dialogueText: "(\uC9C0\uB3C4\uB97C \uB0B4\uB824\uCE58\uBA70) \uD1B5\uC81C \uBD88\uB2A5\uC785\uB2C8\uB2E4.
-      \uC2A4\uBAA8\uADF8\uAC00 \uC9D9\uC5B4\uC9C0\uB2C8 CCTV\uB3C4 \uBB34\uC6A9\uC9C0\uBB3C\uC774\uACE0,
-      \uC57D\uD0C8\uC790\uB4E4\uC774 \uC0C1\uC810 \uC720\uB9AC\uB97C \uAE68\uACE0
-      \uB2E4\uB2D9\uB2C8\uB2E4."
-    branches: []
   - dialogueType: 0
     actionGaugeReductionRate: 0
     evironmentGuageChange: 0
@@ -103,7 +91,7 @@ MonoBehaviour:
     securityGaugeChange: 0
     characterName: "\uACBD\uCC30\uC11C\uC7A5"
     dialogueText: "\uBCD1\uB825\uC774 \uBD80\uC871\uD55C \uAC8C \uC544\uB2D9\uB2C8\uB2E4.
-      **'\uAD8C\uD55C'**\uC774 \uBD80\uC871\uD55C \uAC81\uB2C8\uB2E4! \uC2DC\uC7A5\uB2D8,
+      '\uAD8C\uD55C'\uC774 \uBD80\uC871\uD55C \uAC81\uB2C8\uB2E4! \uC2DC\uC7A5\uB2D8,
       \uC624\uB298 \uBC24 \uB3C4\uC2DC\uB97C \uC644\uC804\uD788 \uC7A0\uAC00\uBC84\uB824\uC57C
       \uD569\uB2C8\uB2E4. \uC950\uC0C8\uB07C \uD55C \uB9C8\uB9AC\uB3C4 \uBABB \uB098\uC624\uAC8C
       \uB9D0\uC785\uB2C8\uB2E4."

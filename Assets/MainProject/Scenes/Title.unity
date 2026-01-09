@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc957582717b5ab498684cb0ce22e680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  FontAsset: {fileID: 11400000, guid: 528e431654e89f24e9e3522ab803c683, type: 2}
   fadeCanvasGroup: {fileID: 0}
   fadeImage: {fileID: 0}
   DayIndex: 0
@@ -957,6 +957,7 @@ MonoBehaviour:
   enButton: {fileID: 545307612}
   krButton: {fileID: 1604931492}
   defaultButtonColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+  selectedButtonColor: {r: 0.9056604, g: 0.8334962, b: 0, a: 1}
 --- !u!1 &700038143
 GameObject:
   m_ObjectHideFlags: 0

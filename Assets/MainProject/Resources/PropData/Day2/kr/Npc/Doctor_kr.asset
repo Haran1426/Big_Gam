@@ -74,7 +74,7 @@ MonoBehaviour:
           \uC751\uAE09\uC2E4\uC740 \uAF49 \uCC3C\uACE0, \uC0B0\uC18C\uD638\uD761\uAE30\uB3C4
           \uB2E4 \uB5A8\uC5B4\uC84C\uC2B5\uB2C8\uB2E4."
         branches: []
-  - dialogueType: 1
+  - dialogueType: 0
     actionGaugeReductionRate: 0
     evironmentGuageChange: 0
     economyGuageChange: 0

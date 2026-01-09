@@ -74,7 +74,7 @@ public class FadeManager : MonoBehaviour
             text = textObj.AddComponent<TextMeshProUGUI>();
             text.font = FontAsset;
             text.fontSize *= 2;
-            text.rectTransform.sizeDelta *= 2;
+            text.alignment = TextAlignmentOptions.Center;
             text.text = $"Day {DayIndex}";
         }
         else if (DayIndex == 4)
@@ -88,6 +88,12 @@ public class FadeManager : MonoBehaviour
         rect.anchorMax = Vector2.one;
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
+
+        RectTransform textRect = textObj.GetComponent<RectTransform>();
+        textRect.anchorMin = Vector2.zero;
+        textRect.anchorMax = Vector2.one;
+        textRect.offsetMin = Vector2.zero;
+        textRect.offsetMax = Vector2.zero;
     }
 
     /// <summary>
